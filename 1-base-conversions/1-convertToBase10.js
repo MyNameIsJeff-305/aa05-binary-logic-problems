@@ -3,7 +3,16 @@
 /******************************************************************************/
 
 const convertToBase10 = str => {
-  // Your code here 
+  if(str.startsWith("0b")) {
+    // let num = 0;
+    // for (let i = str.length - 1; i >= 2; i--) {
+    //   let bit = Number(str[i])
+    //   num += bit * Math.pow(2, str.length - 1- i);
+    // }
+    // return num;
+    return parseInt(str.slice(2), 2);
+  }
+  else return parseInt(str.slice(2), 16);
 };
 
 /******************************************************************************/

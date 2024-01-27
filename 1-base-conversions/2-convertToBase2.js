@@ -3,10 +3,22 @@
 /******************************************************************************/
 
 const convertToBase2 = element => {
-  // Your code here 
+  if(typeof(element) === "number") {
+    return "0b" + element.toString(2);
+  }
+  else {
+    let hex = element.slice(2);
+    let decimal = parseInt(hex, 16);
+
+    return "0b" + decimal.toString(2);
+  }
 };
 
 /******************************************************************************/
+
+
+let test = 4;
+
 
 console.log(convertToBase2(4)); // 0b100
 console.log(convertToBase2(65)); // 0b1000001
